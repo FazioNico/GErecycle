@@ -43,5 +43,6 @@ export class MyApp {
 }
 ionicBootstrap(MyApp, [ HTTP_PROVIDERS ],{
     mode: 'md',
-    tabbarPlacement: 'top'
+    tabbarPlacement: 'top',
+    prodMode: true
 });
