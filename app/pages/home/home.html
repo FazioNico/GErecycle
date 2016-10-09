@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Catégories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <categories [dataInput]="categories" (goCat)="onGoCat($event)"></categories>
+</ion-content>

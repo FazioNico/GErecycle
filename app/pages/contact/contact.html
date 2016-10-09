@@ -1,0 +1,75 @@
+<ion-header >
+  <ion-navbar primary>
+    <ion-title>
+      Infos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <span primary>Jours de collecte des déchets:</span>
+    </ion-card-header>
+    <ion-card-content>
+      <p><b>Rive Gauche:</b></p>
+      <ul>
+      	<li>Lundi: Déchets organiques, Papiers et cartons</li>
+      	<li>Mardi: Ordures ménagères</li>
+      	<li>Mercredi: - </li>
+      	<li>Jeudi: Déchets organiques, Papiers et cartons</li>
+      	<li>Vendredi: Ordures ménagères</li>
+      </ul>
+      <p><b>Rive Droite &amp; Acasias:</b></p>
+      <ul>
+      	<li>Lundi: Ordures ménagères</li>
+      	<li>Mardi: Déchets organiques, Papiers et cartons</li>
+      	<li>Mercredi: - </li>
+      	<li>Jeudi: Ordures ménagères</li>
+      	<li>Vendredi: Déchets organiques, Papiers et cartons</li>
+      </ul>
+      <p><b>Centre ville:</b></p>
+      <ul>
+      	<li>Lundi: -</li>
+      	<li>Mardi: -</li>
+      	<li>Mercredi: Papiers et cartons </li>
+      	<li>Jeudi: -</li>
+      	<li>Vendredi: -</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <span primary>Espace de récupération:</span>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        <b>Espace de récupération
+        cantonal (ESREC) de Châtillon</b><br />
+        Chemin des Communaux <br />
+        1233 Bernex
+      </p>
+      <p>
+        <b>Espace de récupération
+        cantonal (ESREC) de la Praille</b><br />
+        Avenue de la Praille 47A<br />
+        1227 Carouge GE
+      </p>
+      <p>
+        <b>Espace de récupération
+        cantonal (ESREC) des Chânats</b><br />
+        Chemin des Chânats <br />
+        1293 Bellevue
+      </p>
+      <div  padding>
+        <button block (click)="onGoMap()">
+          <ion-icon name="pin"></ion-icon>
+          Afficher sur le plan
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

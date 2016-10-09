@@ -1,0 +1,120 @@
+<!--
+  Generated template for the PlacePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>{{catTitle | ucfirst }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div *ngIf="catData">
+
+    <div center>
+      <img src="./build/img/picto-recycle/{{getURI(catTitle)}}.jpg" />
+    </div>
+
+    <ion-card *ngIf="catData.ou">
+      <ion-card-header>
+        <span primary>Ou?</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.ou"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.quoi">
+      <ion-card-header>
+        <span primary>Quoi?</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.quoi"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.comment">
+      <ion-card-header>
+        <span primary>Comment?</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.comment"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.quand">
+      <ion-card-header>
+        <span primary>Quand?</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.quand"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.exclu">
+      <ion-card-header>
+        <span primary>Sont exclus:</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.exclu"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.collecte">
+      <ion-card-header>
+        <span primary>Jours de collecte:</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.collecte"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="catData.info">
+      <ion-card-header>
+        <span primary>Bon à savoir:</span>
+      </ion-card-header>
+      <ion-card-content>
+        <div [innerHTML]="catData.info"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <div padding>
+
+      <button block *ngIf="displayMap === true" (click)="onGoMap()">
+        <ion-icon name="pin"></ion-icon>
+        Afficher sur le plan
+      </button>
+
+      <div *ngIf="getURI(catTitle) === 'dechets-encombrants'" >
+        <a class="button button-default button-block button-icon-left" href="tel:0800224222">
+          <span class="button-inner">
+            <ion-icon name="call"></ion-icon>
+            Appeler le n° gratuit
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="!catData">
+
+    <ion-card>
+      <ion-card-header>
+        <span primary>Pas de données à afficher</span>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Verifiez la connexion internet et relancer l'application.</p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>
