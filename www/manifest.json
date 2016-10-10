@@ -1,6 +1,6 @@
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "GErecycle mes déchets",
+  "short_name": "GErecycle",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
