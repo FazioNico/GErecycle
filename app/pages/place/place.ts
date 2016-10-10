@@ -32,10 +32,10 @@ export class PlacePage {
     this.displayMap = haveMap;
 
     if(navigator.onLine == false){
-      console.log('disconnected')
+      //console.log('disconnected')
     }
     else {
-      console.log(this.getURI(this.catTitle).replace(/ /g,"-"))
+      //console.log(this.getURI(this.catTitle).replace(/ /g,"-"))
       this.loadDataPage()
 
     }

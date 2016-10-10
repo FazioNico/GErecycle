@@ -27,11 +27,11 @@ export class GoogleMap{
   loadGoogleMaps(){
      this.addConnectivityListeners();
      if(typeof google == "undefined" || typeof google.maps == "undefined"){
-       console.log("Google maps JavaScript needs to be loaded.");
+       //console.log("Google maps JavaScript needs to be loaded.");
        this.disableMap();
 
        if(navigator.onLine === true){
-         console.log("online, loading map");
+         //console.log("online, loading map");
          //Load the SDK
          window['mapInit'] = () => {
            this.initMap();
@@ -49,12 +49,12 @@ export class GoogleMap{
      }
      else {
        if(navigator.onLine === true){
-         console.log("showing map");
+         //console.log("showing map");
          this.initMap();
          this.enableMap();
        }
        else {
-         console.log("disabling map");
+         //console.log("disabling map");
          this.disableMap();
        }
      }
@@ -124,11 +124,11 @@ export class GoogleMap{
   }
 
   disableMap(){
-   console.log("disable map");
+   //console.log("disable map");
   }
 
   enableMap(){
-   console.log("enable map");
+   //console.log("enable map");
   }
 
 }
